@@ -1,3 +1,4 @@
+import os
 import openai
 
 # Backend
@@ -5,7 +6,7 @@ import openai
 
 class Chatbot:
     def __init__(self):
-        openai.api_key = "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"
+        openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # Tokens are words, 'allowing the bot to provide longer answers'
 # Meaning bot cannot provide more than 3000 tokens, 4080 is the max
